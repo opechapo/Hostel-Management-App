@@ -1,0 +1,47 @@
+import React from 'react';
+import './Register.css';
+import { Link } from 'react-router-dom'
+
+const AdminReg = () => {
+  return (
+    <div className='container form__ --100vh'>
+        <p className='title'>Create an account</p>
+        <form className='form form-container'>
+            <div className="--dir-column left">
+                <label htmlFor="fullname">Full Name:</label>
+                <input type="text" className='input' name='fullname' placeholder='Enter Your Full Name' required />
+            </div>
+            
+            <div className="--dir-column left">
+                <label htmlFor="email">Email:</label>
+                <input type="email" className='input' name='email' placeholder='Enter Your Email' required />
+            </div>
+
+            <div className="--dir-column left">
+                <label htmlFor="password">Password:</label>
+                <input type="password" className='input' name='password' placeholder='Enter Your Password' required />
+            </div>
+            
+            <div className="--dir-column left">
+                <label htmlFor="password">Confirm Password:</label>
+                <input type="password" className='input' name='confirmPassword' placeholder='Comfirm Password' required />
+            </div>
+
+            <div className="card">
+                <ul>
+                    <li className="indicator"><span>&nbsp; Lowercase & Uppercase</span></li>
+                    <li className="indicator"><span>&nbsp; Number (0 - 9)</span></li>
+                    <li className="indicator"><span>&nbsp; Special Characters (!"£$^&*@~#)</span></li>
+                    <li className="indicator"><span>&nbsp; Minimum of 6 characters</span></li>
+                </ul>
+            </div>
+            <button className='--btn'>Create an account</button>
+        </form>
+        <p>Already have an account? 
+          {/* <Link to='/login'>Login</Link> */}
+           </p>
+    </div>
+  )
+}
+         
+export default AdminReg
