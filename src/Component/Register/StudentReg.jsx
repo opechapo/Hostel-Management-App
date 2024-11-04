@@ -3,7 +3,8 @@ import React from 'react'
 const StudentReg = () => {
   return (
     <div className='container form__ --100vh'>
-    <p className='title'>Register a new student</p>
+   <div>
+   <p className='title'>Register a new student</p>
     <form className='form form-container'>
         <div className="--dir-column left">
             <label htmlFor="studentName">Student Name:</label>
@@ -43,9 +44,11 @@ const StudentReg = () => {
         </div> */}
         <button className='--btn'>Register</button>
     </form>
-    {/* <p>Already have an account?  */}
+     {/* <p>Already have an account?  */}
       {/* <Link to='/login'>Login</Link> */}
        {/* </p> */}
+   </div>
+   
 </div>
   )
 }
