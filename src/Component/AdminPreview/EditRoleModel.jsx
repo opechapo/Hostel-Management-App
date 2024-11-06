@@ -19,7 +19,7 @@ const EditRoleModel = ({user, onUpdateRole, onClose}) => {
           <h2 className='modal-title'>Edit Role</h2>
           <p className='user-name'>User: {user.name}</p>
           <label htmlFor="role" className='role-label'>New Role</label>
-          <input type="text" id='role' className='role-input' onChange={handleRoleChange}/>
+          <input type="text" id='role' className='role-input' value={newRole} onChange={handleRoleChange}/>
 
          <div className='button-group'>
           <button className='save-button' onClick={handleSubmit}>save</button>
