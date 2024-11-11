@@ -216,7 +216,7 @@
   gap: 1rem;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 768px) {
   .__homeDashCon {
     margin: 10px 20px 0 20px; /* Adjust margin for smaller screens */
   }

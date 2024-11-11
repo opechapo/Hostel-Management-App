@@ -24,9 +24,10 @@
   background: #f0f2f5;
 }
 
-.dash-main {
+.dash-main{
   width: 90%;
   padding: 16px;
+
 }
 
 .right {
@@ -79,6 +80,7 @@
   border-radius: 12px;
   border: 1px solid #dbe0e5;
   background: #fff;
+  
 }
 
 .table_wrapper {
@@ -93,7 +95,7 @@
 }
 
 .same_class {
-  vertical-align: top;
+  vertical-align: center;
   text-align: left;
   padding: 8px;
 }
@@ -135,6 +137,7 @@ tbody > tr:hover {
   letter-spacing: 0.21px;
 }
 
+
 ._noBg {
   background: transparent;
 }
@@ -146,23 +149,62 @@ tbody > tr:hover {
 }
 
 .mobile-side-nav {
-  display: block;
-  position: fixed;
-  left: 0;
-  background-color: #fff;
+display: block;
+position: fixed;
+left: 0;
+background-color: #fff;
+}
+
+
+.modal-content button {
+  margin: 10px;
+  width: 100%;
+  border-radius: 12px;
+  background: #1a6917;
+  padding: 10px;
+  font-size: 15px;
+  color: white;
+}
+
+.modal-content .one {
+  background: rgba(0, 0, 255, 0.743);
+  color: white;
+}
+.modal-content .two {
+  background: rgba(26, 130, 151, 0.743);
+  color: white;
+}
+.modal-content .three {
+  background: rgba(255, 0, 0, 0.743);
+  color: white;
+}
+
+.modal-content input {
+  border: 1px solid grey;
+  width: 100%;
+  padding: 4px;
+  font-size: 12px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
 }
 
 @media (max-width: 900px) {
   .sidebar-toggle-icon {
     display: block;
   }
-  .desktop-side-nav {
+  .desktop-side-nav{
     display: none;
   }
 
-  .dash-main {
+  .dash-main{
     width: 100%;
   }
+
+
 }
-@media (min-width: 481px) and (max-width: 768px) {
+@media (min-width:481px) and (max-width: 768px){
+  
 }

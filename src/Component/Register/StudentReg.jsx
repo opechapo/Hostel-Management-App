@@ -1,35 +1,36 @@
 import React from 'react'
+import "./Register.css"
 
 const StudentReg = () => {
   return (
     <div className='container form__ --100vh'>
-   <div>
+   <div className='form-container'>
    <p className='title'>Register a new student</p>
-    <form className='form form-container'>
-        <div className="--dir-column left">
+    <form className='form'>
+        <div className="--dir-column">
             <label htmlFor="studentName">Student Name:</label>
             <input type="text" className='input' name='studentName' placeholder='Enter name' required />
         </div>
         
-        <div className="--dir-column left">
+        <div className="--dir-column">
             <label htmlFor="age">Age:</label>
             <input type="number" className='input' name='age' placeholder='Enter Your Email' required />
         </div>
 
-        <div className="--dir-column left">
+        <div className="--dir-column">
             <label htmlFor="roomNumber">Room Number:</label>
             <input type="number" className='input' name='roomNumber' placeholder='Enter number' required />
         </div>
         
-        <div className="--dir-column left">
+        <div className="--dir-column">
             <label htmlFor="contactEmail">Contact Email:</label>
             <input type="email" className='input' name='contactEmail' placeholder='Enter email' required />
         </div>
-        <div className="--dir-column left">
+        <div className="--dir-column">
             <label htmlFor="guardianName">Guardian's Name:</label>
-            <input type="email" className='input' name='guardianName' placeholder='Enter name' required />
+            <input type="name" className='input' name='guardianName' placeholder='Enter name' required />
         </div>
-        <div className="--dir-column left">
+        <div className="--dir-column">
             <label htmlFor="contactEmail">Guardian's Contact Email:</label>
             <input type="email" className='input' name='contactConfirmPassword' placeholder='Enter email' required />
         </div>
