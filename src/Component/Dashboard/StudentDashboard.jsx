@@ -8,6 +8,8 @@ import { Link } from "react-router-dom";
 import { confirmAlert } from 'react-confirm-alert';
 import "react-confirm-alert/src/react-confirm-alert.css";
 import UpdateStudentProfile from "../Modal/UpdateStudentProfile";
+import ChangeStudentRoom from "../Modal/ChangeStudentRoom";
+import UpdateCheckin from "../Modal/UpdateCheckin";
  
 const studentData = [
   {
@@ -180,7 +182,7 @@ const StudentDashboard = () => {
                 </div>
             </div>
         )}
-        {selectedModal === "UpdateStudentProfile" && (<UpdateStudentProfile student={selectedStudent} updateFilteredData={updateFilteredData} onClose={handleModalClose}/>)}
+        {selectedModal === "UpdateStudentProfile" && (<UpdateStudentProfile   student={selectedStudent} updateFilteredData={updateFilteredData} onClose={handleModalClose}/>)}
         {selectedModal === "ChangeStudentRoom" && (<ChangeStudentRoom student={selectedStudent} onClose={handleModalClose}/>)}
         {selectedModal === "UpdateCheckin" && (<UpdateCheckin student={selectedStudent} onClose={handleModalClose}/>)}
     </div>
