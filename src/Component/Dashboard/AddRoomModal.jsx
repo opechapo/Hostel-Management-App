@@ -62,15 +62,7 @@ const AddRoomModal = ({onAddRoom, onClose}) => {
             onChange={handleChange}
             className='input-field'
             />
-            {/* <label htmlFor="roomOccupancy" className='room-label'>Occupancy:</label>
-            <input 
-            name='roomOccupancy'
-            type="text"
-            id='roomOccupancy'
-            value={newRoom?.roomOccupancy}
-            onChange={handleChange}
-            className='input-field'
-            /> */}
+           
 
             <label htmlFor="roomLocation">Location:</label>
             <input 
