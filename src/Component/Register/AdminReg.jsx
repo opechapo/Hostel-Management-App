@@ -54,6 +54,8 @@ const AdminReg = () => {
     setPassLength(password.length >= 6);
   }, [formData.password]);
 
+  
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -87,6 +89,9 @@ const AdminReg = () => {
         toast.success("Registration Successful!");
         navigate("/home-dash", { state: { user: response.data } });
       }
+
+
+
     } catch (error) {
       setIsSubmitting(false);
       toast.error( error?.response?.data.msg)
@@ -112,7 +117,7 @@ const handlePastePassword = (e) => {
   return (
 
     <>
-    {loading ? (<ClipLoader color="#3a86ff" cssOverride={override} loading={loading}/>) : (
+       {loading ? (<ClipLoader color="#3a86ff" cssOverride={override} loading={loading}/>) : (
         <div className="container form__ --100vh">
         <div className="form-container">
           <p className="title">Create an account</p>
@@ -208,7 +213,7 @@ const handlePastePassword = (e) => {
           </p>
         </div>
       </div>
-    )} 
+      )} 
     </>
 
   )
