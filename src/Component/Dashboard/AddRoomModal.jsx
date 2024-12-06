@@ -12,7 +12,6 @@ const AddRoomModal = ({onAddRoom, onClose}) => {
     })
 
     const [isSubmitting, setIsSubmitting] = useState(false);
-
     const [error, setError] = useState("");
 
     const handleChange = (e) => {

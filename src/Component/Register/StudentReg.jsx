@@ -18,6 +18,7 @@ const initial = {
     roomNum: "",
 };
 
+
 const StudentReg = () => {
   const [formData, setFormData] = useState(initial);
   const [isSubmitting, setIsSubmitting] = useState(false);

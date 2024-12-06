@@ -50,8 +50,8 @@ const HomeDash = () => {
       <div className="--flex-center __firstCon">
         <h4 className="__title">Recent Activities.</h4>
 
-        {activities.map((activity) => (
-          <div className="__users">
+        {activities.map((activity, i) => (
+          <div className="__users" key={i}>
             <div className="__firstUserPic">
               <img src={activity.img} alt={activity.name} />
             </div>

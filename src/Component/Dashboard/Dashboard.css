@@ -24,18 +24,14 @@
   background: #f0f2f5;
 }
 
-.right {
-  /* width: 921px; */
-  padding: 16px;
-}
-
 .dash-main {
   width: 90%;
   padding: 16px;
 }
 
-.room-table {
-  max-width: 1600px;
+.right {
+  /* width: 921px; */
+  padding: 16px;
 }
 
 .right p:nth-child(1) {
@@ -59,7 +55,7 @@
 
 .search {
   width: 100%;
-  max-width: 300px;
+  max-width: 500px;
   border-radius: 12px;
   background: #f0f2f5;
   padding: 16px;
@@ -70,19 +66,23 @@
 .search::placeholder {
   color: #637587;
   font-family: Inter;
-  font-size: 12px;
+  font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: 24px;
 }
+
 .table {
   padding: 5px;
   width: 100%;
-  overflow-x: auto;
+  overflow: auto;
   border-radius: 12px;
   border: 1px solid #dbe0e5;
   background: #fff;
-  overflow: auto;
+}
+
+.table::-webkit-scrollbar {
+  display: none;
 }
 
 .table_wrapper {
@@ -97,9 +97,10 @@
 }
 
 .same_class {
-  vertical-align: top;
+  vertical-align: center;
   text-align: left;
   padding: 8px;
+  height: 75px;
 }
 
 .table__row {
@@ -118,13 +119,18 @@
 .table__row:nth-child(even) {
   background-color: #fff;
 }
+
 tbody > tr:hover {
   cursor: pointer;
 }
 
+.room-table {
+  min-width: 600px;
+}
+
 .right button {
   margin-top: 1.2em;
-  /* width: 480px; */
+  width: 60%;
   height: 40px;
   padding: 0px 16px;
   color: #121417;
@@ -139,70 +145,20 @@ tbody > tr:hover {
   background: transparent;
 }
 
-.modal-content input {
-  border: 1px solid grey;
-  width: 100%;
-  padding: 4px;
-  font-size: 12px;
-  border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
-}
-
-.mobile-side-nav {
-  display: block;
-  position: fixed;
-  /* position: absolute; */
-  left: 0;
-  background-color: #fff;
-}
-
-.sidebar-toggle-iconB {
+.sidebar-toggle-icon {
   cursor: pointer;
   font-size: 50px;
   display: none;
 }
 
-@media (max-width: 991px) {
-  .sidebar-toggle-iconB {
-    display: block;
-  }
-
-  .desktop-side-nav {
-    display: none;
-  }
-
-  .dash-main {
-    width: 100%;
-  }
-}
-
-.modal {
+.mobile-side-nav {
+  display: block;
   position: fixed;
-  top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: rgba(0, 0, 0, 0.5);
+  background-color: #fff;
 }
 
-.modal-content {
-  background: white;
-  padding: 20px;
-  border-radius: 5px;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
-/* .modal-content button {
+.modal-content button {
   margin: 10px;
   width: 100%;
   border-radius: 12px;
@@ -210,7 +166,7 @@ tbody > tr:hover {
   padding: 10px;
   font-size: 15px;
   color: white;
-} */
+}
 
 .modal-content .one {
   background: rgba(0, 0, 255, 0.743);
@@ -223,4 +179,31 @@ tbody > tr:hover {
 .modal-content .three {
   background: rgba(255, 0, 0, 0.743);
   color: white;
+}
+
+.modal-content input {
+  border: 1px solid grey;
+  width: 100%;
+  padding: 4px;
+  font-size: 12px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+@media (max-width: 900px) {
+  .sidebar-toggle-icon {
+    display: block;
+  }
+  .desktop-side-nav {
+    display: none;
+  }
+
+  .dash-main {
+    width: 100%;
+  }
+}
+@media (min-width: 481px) and (max-width: 768px) {
 }
