@@ -5,9 +5,9 @@ import { FaTimes } from 'react-icons/fa';
 import { BsCheck2All } from 'react-icons/bs';
 import {ClipLoader} from 'react-spinners';
 import { toast } from 'react-toastify';
-import { UserContext } from '../../context/UserContext';
+import { UserContext } from '../../context/userContext';
 import axios from 'axios';
-import PasswordInput from '../PasswordInput/PasswordInput';
+import Passwordinput from "../PasswordInput/Passwordinput";
 
 
 const BASE_URL= import.meta.env.VITE_BASE_URL;
@@ -121,12 +121,12 @@ const AdminReg = () => {
   
               <div className="--dir-column">
                   <label htmlFor="password">Password:</label>
-                  <PasswordInput type="password" className='input' name='password' placeholder='Enter Your Password' onChange={handleInputChange} value={formData.password} required />
+                  <Passwordinput type="password" className='input' name='password' placeholder='Enter Your Password' onChange={handleInputChange} value={formData.password} required />
               </div>
               
               <div className="--dir-column">
                   <label htmlFor="password">Confirm Password:</label>
-                  <PasswordInput type="password" className='input' name='password2' placeholder='Comfirm Password' onChange={handleInputChange} value={formData.password2} onPaste={handlePastePassword} required />
+                  <Passwordinput type="password" className='input' name='password2' placeholder='Comfirm Password' onChange={handleInputChange} value={formData.password2} onPaste={handlePastePassword} required />
               </div>
   
               <div className="card">
