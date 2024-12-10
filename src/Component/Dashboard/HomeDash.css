@@ -1,25 +1,24 @@
-.__users{
-  display: flex;
-  justify-content: center;
-
-}
-
-.__flex{
+.__users {
   display: flex;
   justify-content: center;
 }
 
-.__homeDashCon{
+.__flex {
+  display: flex;
+  justify-content: center;
+}
+
+.__homeDashCon {
   flex-direction: column;
   margin: 20px 160px 0 160px;
 }
-  
-.__paraCon{
+
+.__paraCon {
   width: 100%;
   padding: 24px;
 }
 
-.__paraHeader{
+.__paraHeader {
   font-family: var(--font-family);
   font-size: 32px;
   font-weight: 700;
@@ -28,11 +27,11 @@
   text-align: left;
 }
 
-.__secondCon{
+.__secondCon {
   width: 100%;
 }
 
-.__quickTitle{
+.__quickTitle {
   padding: 24px;
   font-family: var(--font-family);
   font-size: 22px;
@@ -40,17 +39,16 @@
   line-height: 28px;
   letter-spacing: -0.33000001311302185px;
   text-align: left;
-
 }
 
-.__boards{
-  width: var( --full-width);
+.__boards {
+  width: var(--full-width);
   justify-content: space-around;
   gap: 12.5px;
   padding: 12px 16px 12px 16px;
 }
 
-.__board{
+.__board {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -59,10 +57,10 @@
   padding: 12px;
   gap: 8px;
   border-radius: 10px;
-  border: 1px solid #DBE0E5;
+  border: 1px solid #dbe0e5;
 }
 
-.__boardHead{
+.__boardHead {
   font-family: var(--font-family);
   font-size: 24px;
   font-weight: 700;
@@ -72,7 +70,7 @@
   color: #121417;
 }
 
-.__boardDetails{
+.__boardDetails {
   font-family: var(--font-family);
   font-size: 14px;
   font-weight: 400;
@@ -82,14 +80,14 @@
   color: #637587;
 }
 
-.__firstCon{
+.__firstCon {
   width: var(--full-width);
   padding: 24px;
   gap: 24px;
   flex-direction: column;
 }
 
-.__title{
+.__title {
   font-family: var(--font-family);
   font-size: 22px;
   font-weight: 700;
@@ -98,10 +96,9 @@
   text-align: left;
   color: #121417;
   width: 100%;
-
 }
 
-.__users{
+.__users {
   width: var(--full-width);
   display: flex;
   align-items: center;
@@ -109,20 +106,20 @@
   gap: 10px;
 }
 
-.__firstUserPic{
+.__firstUserPic {
   width: 56px;
   height: 56px;
   border-radius: 50%;
 }
 
-.__userData{
+.__userData {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: var(--full-width);
 }
 
-.__userData > div > h5{
+.__userData > div > h5 {
   font-family: var(--font-family);
   font-size: 16px;
   font-weight: 500;
@@ -132,7 +129,7 @@
   color: #121417;
 }
 
-.__userData > div >p{
+.__userData > div > p {
   font-family: var(--font-family);
   font-size: 14px;
   font-weight: 400;
@@ -142,7 +139,7 @@
   color: #637587;
 }
 
-.__userData > p{
+.__userData > p {
   font-family: var(--font-family);
   font-size: 14px;
   font-weight: 400;
@@ -150,10 +147,9 @@
   letter-spacing: 0px;
   text-align: left;
   color: #637587;
-
 }
 
-.__lastCon{
+.__lastCon {
   width: var(--full-width);
   display: flex;
   justify-content: center;
@@ -163,7 +159,7 @@
   padding: 24px;
 }
 
-.__lastTitle{
+.__lastTitle {
   font-family: var(--font-family);
   font-size: 22px;
   font-weight: 700;
@@ -171,17 +167,16 @@
   letter-spacing: -0.33000001311302185px;
   text-align: left;
   color: #121417;
-
 }
 
-.__lastCon >div {
+.__lastCon > div {
   display: flex;
   align-items: center;
   justify-content: left;
   gap: 12.08px;
 }
 
-.__lastCon >div > button{
+.__lastCon > div > button {
   width: 144px;
   height: 40px;
   border-radius: 10px;
@@ -189,18 +184,17 @@
   padding: 0 16px 0 16px;
 }
 
-.__addBtn{
+.__addBtn {
   width: 118.94px;
-  background: #1A80E5;
+  background: #1a80e5;
   font-family: var(--font-family);
   font-size: 14px;
   font-weight: 700;
   line-height: 21px;
   letter-spacing: 0.20999999344348907px;
-  color: #fff;
 }
 
-.__attendBtn{
+.__attendBtn {
   font-family: Inter;
   font-size: 14px;
   font-weight: 700;
@@ -209,11 +203,26 @@
   color: #121417;
 }
 
-
 .dashboard-links-container {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+}
+
+.home_table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.table_data, .table_data {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+.table_data:nth-child(even) {
+  background-color: #dddddd;
 }
 
 @media screen and (max-width: 768px) {
@@ -221,7 +230,7 @@
     margin: 10px 20px 0 20px; /* Adjust margin for smaller screens */
   }
 
-  .__boardss {
+  .__boards {
     flex-direction: column; /* Adjust flex direction for smaller screens */
     align-items: center; /* Center align items */
   }

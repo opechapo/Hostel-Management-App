@@ -8,40 +8,46 @@ import Layout from "./Component/Layout/Layout";
 import AdminPreview from "./Component/AdminPreview/AdminPreview";
 import HomeDash from "./Component/Dashboard/HomeDash";
 import StudentDashboard from "./Component/Dashboard/StudentDashboard";
-import Rooms from "./Component/Dashboard/Rooms";
+import Room from "./Component/Dashboard/Rooms";
 import RequireAuth from "./context/RequireAuth";
-// import Rooms from './Component/Dashboard/Rooms';
 
 function App() {
-  const renderRoute = () => (
+  const RenderRoute = () => (
     <Routes>
       <Route path="/" element={<AdminReg />} />
       <Route path="/login" element={<Login />} />
-      
-      <Route element={<RequireAuth/>}>
-      <Route
-        path="/studentreg"
-        element={
-          <Layout>
-            <StudentReg />
-          </Layout>
-        }
-      />
-      <Route path="/adminprev" element={<AdminPreview />} />
-      <Route
-        path="/home-dash"
-        element={
-          <Layout>
-            <HomeDash />
-          </Layout>
-        }
-      />
-      <Route path="/student-dash" element={<StudentDashboard />} />
-      <Route path="/room" element={<Rooms />} />
+      <Route element={<RequireAuth />}>
+        <Route
+          path="/studentreg"
+          element={
+            <Layout>
+              <StudentReg />
+            </Layout>
+          }
+        />
+        <Route
+          path="/adminprev"
+          element={
+            <Layout>
+              <AdminPreview />
+            </Layout>
+          }
+        />
+        <Route
+          path="/home-dash"
+          element={
+            <Layout>
+              <HomeDash />
+            </Layout>
+          }
+        />
+        <Route path="/student-dash" element={<StudentDashboard />} />
+        <Route path="/room" element={<Room />} />
       </Route>
     </Routes>
   );
-  return <> {renderRoute()} </>;
+
+  return <>{RenderRoute()}</>;
 }
 
 export default App;
