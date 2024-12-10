@@ -5,9 +5,9 @@ import { FaTimes } from 'react-icons/fa';
 import { BsCheck2All } from 'react-icons/bs';
 import {ClipLoader} from 'react-spinners';
 import { toast } from 'react-toastify';
-import { UserContext } from '../../context/userContext';
 import axios from 'axios';
 import Passwordinput from "../PasswordInput/Passwordinput";
+import { UserContext } from '../../context/userContext';
 
 
 const BASE_URL= import.meta.env.VITE_BASE_URL;
