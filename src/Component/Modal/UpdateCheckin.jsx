@@ -2,6 +2,9 @@ import axios from "axios";
 import React, { useState } from "react";
 // import StudentDashboard from '../Dashboard/StudentDashBoard';
 
+const BASE_URL= import.meta.env.VITE_BASE_URL;
+
+
 const UpdateCheckin = ({ student, onClose, currentRoomNumber }) => {
   const [action, setAction] = useState("");
   const [roomNumber, setRoomNumber] = useState("");
@@ -22,7 +25,7 @@ const UpdateCheckin = ({ student, onClose, currentRoomNumber }) => {
     setIsSubmitting(true);
     try {
       const res = await axios.post(
-        "http://localhost:5000/student/check-in-status",
+        `${BASE_URL}/student/check-in-status`,
         {
           studentId: student._id,
           action,

@@ -8,6 +8,10 @@ import axios from "axios";
 import { toast } from "react-toastify";
 import { ClipLoader } from "react-spinners";
 
+
+const BASE_URL= import.meta.env.VITE_BASE_URL;
+
+
 const override = {
   display: "block",
   margin: "100px auto",
@@ -25,7 +29,7 @@ const Rooms = () => {
     setIsLoading(true);
     const fetchRooms = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/room/", {
+        const response = await axios.get(`${BASE_URL}/room/`, {
           withCredentials: true,
         });
         const data = response.data;
@@ -66,7 +70,7 @@ const Rooms = () => {
   const handleAddRoom = async (newRoomData) => {
     try {
       await axios.post(
-        'http://localhost:5000/room/create-room',
+        `${BASE_URL}/admin/room/create-room`,
         {...newRoomData, roomNum: newRoomData.roomNumber},
         {withCredentials: true}
       );
@@ -86,7 +90,7 @@ const Rooms = () => {
   const handleUpdateRoom = async (updatedRoomData) => {
     try {
       const response = await axios.patch(
-        `https://localhost:5000/room/update-room/${updatedRoomData._id}`,
+        `${BASE_URL}/room/update-room/${updatedRoomData._id}`,
         { roomStatus: updatedRoomData.roomStatus },
         { withCredentials: true }
       );
@@ -106,7 +110,7 @@ const Rooms = () => {
   const removeRoom = async (id) => {
     try {
       const response = await axios.delete(
-        `http://localhost:5000/room/${id}`,
+        `${BASE_URL}/room/${id}`,
         { withCredentials: true },
         // {roomStatus:updatedRoomData.roomStatus}
       );

@@ -2,6 +2,10 @@ import axios from 'axios'
 import React, { useState } from 'react'
 import { toast } from 'react-toastify'
 
+
+const BASE_URL= import.meta.env.VITE_BASE_URL;
+
+
 const UpdateStudentProfile = ({student, onClose, updateFilteredData}) => {
   const [formData, setFormData] = useState({
     name: student.name,
@@ -55,7 +59,7 @@ const handleChange= (e) => {
     
     try {
       
-      const response = await axios.patch(`http://localhost:5000/student/${student._id}`, formData, {withCredentials: true});
+      const response = await axios.patch(`${BASE_URL}/student/${student._id}`, formData, {withCredentials: true});
 
       if(response.data){
         updateFilteredData((prevData) => [...prevData, response.data])

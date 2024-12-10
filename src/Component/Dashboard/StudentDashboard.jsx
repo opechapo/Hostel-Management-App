@@ -28,11 +28,14 @@ const StudentDashboard = () => {
   const [currentRoomNumber, setCurrentRoomNumber] = useState('');
   const [isLoading, setIsLoading] = useState(true);
 
+  const BASE_URL= import.meta.env.VITE_BASE_URL;
+
+
   useEffect(() => {
     // setIsLoading(true);
     const fetchStudents = async () => {
         try {
-            const response = await axios.get('http://localhost:5000/student', { withCredentials: true});
+            const response = await axios.get(`${BASE_URL}/student`, { withCredentials: true});
             // console.log(response);
             const data = response.data;
             setFilteredData(data)
@@ -54,7 +57,7 @@ const StudentDashboard = () => {
   const handleDelete = async (studentId) => {
     try {
       // console.log(studentId);
-      const response = await axios.delete(`http://localhost:5000/student/${studentId}`, {withCredentials: true});
+      const response = await axios.delete(`${BASE_URL}/student/${studentId}`, {withCredentials: true});
       console.log(response);
       const updatedFilterData = filteredData.filter((student) => student._id !== studentId);
       setFilteredData(updatedFilterData);

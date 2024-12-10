@@ -1,9 +1,14 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import Passwordinput from "../PasswordInput/Passwordinput";
+import Passwordinput from "../PasswordInput/PasswordInput";
 import { toast } from "react-toastify";
 import axios from "axios";
-import { UserContext } from "../../context/userContext";
+import { UserContext } from "../../context/UserContext";
+
+
+
+const BASE_URL= import.meta.env.VITE_BASE_URL;
+
 
 const Login = () => {
   const [formData, setFormData] = useState({
@@ -33,7 +38,7 @@ const Login = () => {
       };
       setIsSubmitting(true);
       const response = await axios.post(
-        "http://localhost:5000/admin/login",
+        `${BASE_URL}/admin/login`,
         formData,
         { withCredentials: true }
       );
