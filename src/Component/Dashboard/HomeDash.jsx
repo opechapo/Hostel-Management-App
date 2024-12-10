@@ -2,28 +2,56 @@ import React from "react";
 import "./HomeDash.css";
 import { Link } from "react-router-dom";
 
-const activities = [
-  {
-    name: "Jenny OG",
-    action: "Jenny OG just Checked out",
-    time: "3 mins ago",
-    img: "/src/assets/lady.png",
-  },
-  {
-    name: "John Bosco",
-    action: "John Bosco just Checked out",
-    time: "5 mins ago",
-    img: "/src/assets/asset-1.png",
-  },
-  {
-    name: "Johny Sins",
-    action: "Johny Sins just Checked out",
-    time: "7 mins ago",
-    img: "/src/assets/lady.png",
-  },
-];
+// const activities = [
+//   {
+//     name: "Jenny OG",
+//     action: "Jenny OG just Checked out",
+//     time: "3 mins ago",
+//     img: "/src/assets/lady.png",
+//   },
+//   {
+//     name: "John Bosco",
+//     action: "John Bosco just Checked out",
+//     time: "5 mins ago",
+//     img: "/src/assets/asset-1.png",
+//   },
+//   {
+//     name: "Johny Sins",
+//     action: "Johny Sins just Checked out",
+//     time: "7 mins ago",
+//     img: "/src/assets/lady.png",
+//   },
+// ];
+
+const override = {
+  display: "block",
+  margin: "100px auto",
+  borderColor: "red",
+};
 
 const HomeDash = () => {
+  const {user} = useContext(userContext);
+  const [isLoading, setIsLoading] = useContext(true)
+
+  useEffect(() => {
+  const fetchStudents = async () => {
+    try {
+      const response = await axious.get('http://localhost:5000/student')
+      const data = response.data
+      console.log({data});
+      
+    } catch (error) {
+      console.log(error);
+      
+    }
+  }
+    fetchStudents()
+  },[]);
+  if (isLoading)
+    return (
+      <ClipLoader color="#3a86ff" cssOverride={override} loading={isLoading} />
+    );
+
   return (
     <div className="--flex-center __homeDashCon">
       <div className="__paraCon">

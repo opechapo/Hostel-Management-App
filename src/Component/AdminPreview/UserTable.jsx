@@ -32,9 +32,9 @@ const UserTable = ({ data, onDelete, onUpdateRole, onClose }) => {
           </tr>
         </thead>
         <tbody id="__tableBody">
-          {data.map((user, i) => (
-            <tr key={i}>
-              <td className="__tableData __tableName">{user.name}</td>
+          {data.map((user, index) => (
+            <tr key={index}>
+              <td className="__tableData __tableName">{user.fullname}</td>
               <td className="__tableData __tableEmail">{user.email}</td>
               <td className="__tableData __tableRole">
                 <p>{user.role}</p>
@@ -43,14 +43,14 @@ const UserTable = ({ data, onDelete, onUpdateRole, onClose }) => {
               <td className="__tableData __tableAction">
                 <button
                   className="__prevEditButton"
-                  onClick={() => onEdit(user)}
+                  onClick={() => onEdit(user._id)}
                 >
                   Edit
                 </button>
 
                 <button
                   className="__prevDelButtion"
-                  onClick={() => onDelete(user.id)}
+                  onClick={() => onDelete(user._id)}
                 >
                   <RiDeleteBin6Line />
                 </button>
